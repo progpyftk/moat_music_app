@@ -1,31 +1,33 @@
-<header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <%= image_tag ("moat_logo.jpeg"),width:"30", height:"30"%>
-      <a class="navbar-brand" href="#"> Moat Music App </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-          <li class="nav-item active">
-            <%= link_to "Sign Up", signup_path, class: "nav-link active" %>
-          </li>
-          <li class="nav-item active">
-            <%= link_to "Log In", "#", class: "nav-link active" %>
-          </li>
-          <li class="nav-item active">
-            <%= link_to "Albums", "#", class: "nav-link active" %>
-          </li>
-          <li class="nav-item active">
-            <%= link_to "Artists", "#", class: "nav-link active" %>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+<header >
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <%= image_tag ("moat_logo.jpeg"),width:"30", height:"30"%>
+        <a class="navbar-brand" href="#"> Moat Music App </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item active">
+              <%= link_to "Sign Up", signup_path, class: "nav-link active" %>
+            </li>
+            <li class="nav-item active">
+              <%= link_to "Log In", "#", class: "nav-link active" %>
+            </li>
+            <li class="nav-item active">
+              <%= link_to "Albums", "#", class: "nav-link active" %>
+            </li>
+            <li class="nav-item active">
+              <%= link_to "Artists", "#", class: "nav-link active" %>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </header>
