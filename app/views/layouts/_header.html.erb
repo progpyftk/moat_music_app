@@ -11,7 +11,7 @@
           <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
             <% if logged_in? %>
               <li class="nav-item active"> <%= link_to "My Profile", user_path(current_user.id), class: "nav-link active" %></li>
-              <li class="nav-item active"> <%= link_to "Albums", "#", class: "nav-link active" %></li>
+              <li class="nav-item active"> <%= link_to "Albums", albums_path, class: "nav-link active" %></li>
               <li class="nav-item active"> <%= link_to "Artists", "#", class: "nav-link active" %></li>
               <li class="nav-item active"> <%= link_to "Logout", logout_path, method: :delete ,class: "nav-link active" %></li>
             <% else %>
