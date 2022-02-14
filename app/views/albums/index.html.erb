@@ -21,7 +21,7 @@
             <td class="align-middle"><%= album.year %></td>
             <td class="align-middle"><%= album.user.username %></td>
             <td>
-              <% if current_user == album.user || current.user.admin?%>
+              <% if current_user == album.user || current_user.admin?%>
                 <%= link_to "Delete", album, method: :delete, class:"btn btn-danger btn-sm align-middle" ,data: { confirm: "You sure?" } %>
               <% else %>
                 Can't Delete
