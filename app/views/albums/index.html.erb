@@ -5,7 +5,7 @@
   <div class="p-2 bg-light border">
     <table class="table table-bordered">
       <thead>
-        <tr>
+        <tr class="text-center">
           <th>Album Name</th>
           <th>Artist</th>
           <th>Year</th>
@@ -15,14 +15,14 @@
       </thead>
       <tbody>
         <% @albums.each do |album| %>
-          <tr>
-            <td><%= album.name %></td>
-            <td><%= album.artist %></td>
-            <td><%= album.year %></td>
-            <td><%= album.user.username %></td>
+          <tr class="text-center ">
+            <td class="align-middle"><%= album.name %></td>
+            <td class="align-middle"><%= album.artist %></td>
+            <td class="align-middle"><%= album.year %></td>
+            <td class="align-middle"><%= album.user.username %></td>
             <td>
-              <% if current_user == album.user %>
-                <%= link_to "Delete", album, method: :delete, class:"btn btn-danger" ,data: { confirm: "You sure?" } %>
+              <% if current_user == album.user || current.user.admin?%>
+                <%= link_to "Delete", album, method: :delete, class:"btn btn-danger btn-sm align-middle" ,data: { confirm: "You sure?" } %>
               <% else %>
                 Can't Delete
               <% end %>
