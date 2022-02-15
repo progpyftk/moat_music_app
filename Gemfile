@@ -38,13 +38,15 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'solargraph', group: :development
 
 gem 'bcrypt', '3.1.13'
-gem 'faker'
+gem 'faker', :require => false
+gem 'rest-client'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'sqlite3'
 end
+
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
