@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class AlbumsController < ApplicationController
   def new
     if logged_in?
       @album = current_user.albums.build
-      @artist_list = ['Artist1', 'Artist2', 'Artist3', 'Artist4']
+      @artist_list = %w[Artist1 Artist2 Artist3 Artist4]
     else
       flash[:warning] = 'You must be logged in to create a album'
       redirect_to '/login'
@@ -22,7 +24,12 @@ class AlbumsController < ApplicationController
   end
 
   def index
-    @albums = Album.all
+    if logged_in?
+      @albums = Album.all
+    else
+      flash[:warning] = 'You must be logged in to see the albums'
+      redirect_to root_path
+    end
   end
 
   def destroy

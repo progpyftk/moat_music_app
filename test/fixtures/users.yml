@@ -1,2 +1,28 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+# Our test needs to log in as a previously registered user, which means that 
+# such a user must already exist in the database.
+# The default Rails way to do this is to use ﬁxtures, which are a way of orga-
+# nizing data to be loaded into the test database.
+
+# para criar um user na db eh necessario um password_digest - por isso vamos colocar o BCrypt 
+# dentro model do user para poder criar aqui nos testes
+# podemos chamar dentro dos testes user = users(:michael), onde users se refere ao users.yml
+
+michael:
+  name: Michael Example
+  username: michael
+  password_digest: <%= User.digest('password') %>
+  admin: false
+
+user_admin:
+  name: Admin User
+  username: admin
+  password_digest: <%= User.digest('password') %>
+  admin: true
+
+test_user:
+  name: Tester
+  username: tester
+  password_digest: <%= User.digest('password') %>
+  admin: false

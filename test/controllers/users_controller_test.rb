@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
@@ -19,6 +21,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_select 'div[class=?]', 'alert alert-success'
     second_users_count = User.all.count
     assert_equal (second_users_count - first_users_count), 1
+    assert is_logged_in? # test helper que testa se esta loggado
   end
 
   test 'invalid signup - renders form, display alert message , dont change db' do

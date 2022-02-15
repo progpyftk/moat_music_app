@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   get 'sessions/new'
   get '/signup', to: 'users#new' # signup_path = /signup
@@ -7,5 +9,4 @@ Rails.application.routes.draw do
   root 'static_pages#home' # get 'static_pages/home'
   resources :users
   resources :albums
-  
 end

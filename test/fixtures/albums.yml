@@ -1,13 +1,23 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  artist: MyString
-  year: MyString
-  user: one
+michael_album:
+  name: Testing Vibes
+  artist: TesterMan
+  year: 1999
+  user: michael
 
-two:
-  name: MyString
-  artist: MyString
-  year: MyString
-  user: two
+michael_album_2:
+  name: Testing Vibes 2
+  artist: TesterMan
+  year: 2000
+  user: michael
+
+test_album:
+  name: Summer Testing
+  artist: The Great Tester
+  year: 2020
+  user: test_user
+
+  
+
+

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SessionsHelper
   # session eh um metodo do rails - cria um cookie temporario no brownser e expira ao fechar
   # esses cookies gerados pelo metodo session sao automaticamente encriptados
