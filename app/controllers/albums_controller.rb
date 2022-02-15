@@ -4,7 +4,7 @@ class AlbumsController < ApplicationController
   def new
     if logged_in?
       @album = current_user.albums.build
-      @artist_list = %w[Artist1 Artist2 Artist3 Artist4]
+      @artists = artists_names
     else
       flash[:warning] = 'You must be logged in to create a album'
       redirect_to '/login'
