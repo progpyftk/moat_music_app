@@ -18,6 +18,7 @@ class AlbumsController < ApplicationController
       redirect_to albums_path
     else
       # atencao - se user o redirect nao vai funcionar as flash messages
+      @artists = artists_names
       render '/albums/new'
     end
   end
