@@ -32,7 +32,7 @@ class AlbumsController < ApplicationController
   end
 
   def destroy
-    album = Album.find_by(params[:id])
+    album = Album.find(params[:id])
     album.destroy
     flash[:success] = 'Album deleted'
     redirect_to root_path
